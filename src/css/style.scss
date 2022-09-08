@@ -1,0 +1,170 @@
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import "partials/colors";
+@import "partials/typography";
+
+body {
+    background: $bg-color;
+
+    & * {
+        font-family: $ff-defaut;
+        font-size: $fs-defaut;
+    }
+}
+
+.sr-only {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+
+    white-space: nowrap;
+
+    border-width: 0;
+}
+
+#app {
+    max-width: 50rem;
+
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+        text-transform: uppercase;
+        font-size: $fs-header;
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+
+        input {
+            height: 3.2rem;
+
+            border: 0.1rem solid $border-input;
+            border-radius: 0.4rem 0 0 0.4rem;
+
+            padding: 0 0.8rem;
+        }
+        
+        button {
+            background-color: $primary-color;
+
+            font-size: $fs-header;
+
+            border: none;
+            border-radius: 0 0.4rem 0.4rem 0;
+
+            padding: 0 1rem;
+            height: 3, 2rem;
+
+            cursor: pointer;
+
+            transition: all 0.5s ease;
+
+            &:hover {
+                filter: brightness(1.1);
+            }
+        }
+    }
+}
+
+table {
+    margin-top: 2rem;
+
+    width: 100%;
+    border-collapse: collapse;
+
+    box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+    & * {
+        font-size: $fs-table;
+        color: $text-color;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    tr {
+        background: $bg-table-color;
+        &:nth-child(odd) {
+            background: $bg-table-color-2;
+        }
+    }
+
+    th {
+        background: $primary-color;
+
+        text-align: left;
+        font-weight: normal;
+
+        padding: 1.5rem;
+
+        &:first-child {
+            border-top-left-radius: 0.4rem;
+        }
+
+        &:last-child {
+            border-top-right-radius: 0.4rem;
+        }
+    }
+
+    td {
+        padding: 1.5rem;
+        text-align: left;
+
+        &.user {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            img {
+                width: 5rem;
+                height: 5rem;
+
+                object-fit: cover;
+
+                border-radius: 50%;
+            }
+
+            p {
+                font-weight: bold;
+            }
+        }
+
+        .remove {
+            background: none;
+            border: none;
+
+            color: $remove;
+
+            cursor: pointer;
+
+            transition: all 0.5s ease;
+            &:hover {
+                transform: scale(2);
+            }
+        }
+    }
+}
