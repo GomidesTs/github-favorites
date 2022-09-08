@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="src/svg/github.svg" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Github Favorito</title>
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1>Github Favoritos</h1>
+            <div class="search">
+                <label class="sr-only" for="user-git">Usuário do Guithub</label>
+                <input type="text" name="user-git" id="user-git" placeholder="Usuário do Guithub">
+                <button>&plus;</button>
+            </div>
+        </header>
+        <main>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Usuário</th>
+                        <th>Repositorios</th>
+                        <th>Seguidores</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </main>
+    </div>
+    <script src="src/js/main.js" type="module"></script>
+</body>
+
+</html>
